@@ -1,0 +1,32 @@
+body {
+    background: url(./Image/2022-07-31_14.28.56.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    min-height: 100vh;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+.title {
+    z-index: 5;
+    color: red;
+    font-size: 0.5in;
+    font-weight: 900;
+    position: absolute;
+    margin-top: -2cm;
+}
+.clock  {
+    font-size: xx-large;
+    color: white;
+    display: flex;
+    position: absolute;
+    font-family: minecraft;
+
+}
+@font-face {
+    font-family: minecraft;
+    src: url(./Font/MinecraftTen-VGORe.ttf);
+}

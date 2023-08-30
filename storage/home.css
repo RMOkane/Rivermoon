@@ -1,0 +1,466 @@
+* {scroll-behavior: smooth;}
+body {
+    background: url(./Image/0512a449b73665683c27.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+    width: 4px;
+    background: linear-gradient(red , #7a40f8);
+}
+::-webkit-scrollbar-thumb {
+    background: white;
+}
+/* Key Frame */
+@keyframes rainbow-text{
+    100%,0%{
+        color: rgb(255,0,0);
+    }
+    8%{
+        color: rgb(255,127,0);
+    }
+    16%{
+        color: rgb(255,255,0);
+    }
+    25%{
+        color: rgb(127,255,0);
+    }
+    33%{
+        color: rgb(0,255,0);
+    }
+    41%{
+        color: rgb(0,255,127);
+    }
+    50%{
+        color: rgb(0,255,255);
+    }
+    58%{
+        color: rgb(0,127,255);
+    }
+    66%{
+        color: rgb(0,0,255);
+    }
+    75%{
+        color: rgb(127,0,255);
+    }
+    83%{
+        color: rgb(255,0,255);
+    }
+    91%{
+        color: rgb(255,0,127);
+    }
+}
+/* Key Frame */
+
+/* Custorm font */ 
+@font-face {
+    font-family: minecraft;
+    src: url(./Font/MinecraftTen-VGORe.ttf);
+}
+@font-face {
+    font-family: DH;
+    src: url(./Font/DragonHunter-9Ynxj.otf);
+}
+@font-face {
+    font-family: OSBL;
+    src: url(./Font/OldSansBlack.ttf);
+}
+@font-face {
+    font-family: posterema;
+    src: url(./Font/Posterama\ 1901\ Thin.otf);
+}
+@font-face {
+    font-family: lucette;
+    src: url(./Font/Lucette-Regularitalic.otf);
+}
+@font-face {
+    font-family: hubbali;
+    src: url(./Font/Hubballi-Regular.ttf);
+}
+/* Custorm font */
+
+/* Header */ 
+
+.firtname , .lastname {
+    font-family: lucette;
+}
+.firtname{
+    color:#fff;
+    height: 1cm;
+    letter-spacing: 0.1cm;
+    font-size: xx-large;
+    font-weight: 600;
+    position: absolute;
+    top: 15px;
+    left: 0.6cm;
+}
+.lastname {
+    color : #2F1480; 
+    top: 20px;
+    left: 1cm;
+    letter-spacing: 0.2rem;
+    font-size: xx-large;
+    font-weight: 600;
+    position: absolute;
+}
+.label-menu {
+    color: white;
+    position: fixed;
+    top: 0.6cm;
+    right: 0.2cm;
+    font-size: 0.7cm;
+    transition: .5s;
+    transition-delay: 0.5s;
+    width: 2cm;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+}
+#open_menu {
+    font-size: larger;
+    cursor: pointer;
+    transition: .2s;
+}
+#checkbox_menu {
+    visibility: hidden !important;
+}
+.menu {
+    position: fixed;
+    top: 0.6cm;
+    right: -1000%;
+    height: 1cm;
+    border-radius: 10px;
+    padding-left: 1rem;
+    transition: all 1s;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    border: 2px solid white;
+    border-radius: 10px;
+    border-top: none;
+    border-bottom: none;
+    background: #ffffff27;
+    backdrop-filter: blur(10px);
+    z-index: 10;
+}
+.menu-down {
+    width: 1.1cm;
+    height: 4.5in;
+    backdrop-filter: blur(10px);
+    background: #ffffff27;
+    position: fixed;
+    right: 0.7cm;
+    top: -300%;
+    transition: 1s;
+    border-radius: 10px;
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+    display: none;
+    z-index: 100;
+}
+.menu-down-ul {
+    position: relative;
+    right: 0.98cm;
+    margin: 0 auto;
+}
+.menu-down li {
+    list-style-type: none; 
+    width: 1cm;
+    height: 1.6cm;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+}
+.menu-down a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    transition: 0.3s;
+}
+.menu-down i {
+    font-size: xx-large;
+    display: flex;
+    justify-content: center;
+}
+.menu-down-text {
+    position: absolute;
+    color: white;
+    top: -10px;
+    right: 0.4cm;
+}
+.menu-down-text li {
+    list-style-type: none;
+    width: 1cm;
+    padding-top: 1.2cm;
+    display: flex;
+    justify-content: flex-end;
+    font-size: larger;
+    font-weight: 600;
+}
+#contact {
+    margin-top: -5px;
+}
+.menu-down a:hover {
+    color : aqua;
+}
+#checkbox_menu:checked ~ .menu{
+    right: 2cm;
+}
+#checkbox_menu:checked ~ .menu-down {
+    top: 1.8cm;
+}
+#checkbox_menu:checked ~ .label-menu{
+    transform: rotate(180deg);
+}
+#checkbox_menu:checked ~ .name_icon_menu {
+    opacity: 0;
+}
+.menu-button {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+}
+.menu-button a{
+    color: white;
+    text-decoration: none;
+    font-size: large;
+    font-family: hubbali;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    transition: .15s ease-in-out;
+    width: 2cm;
+    height: 1cm;
+    display: flex;
+    justify-content: center;
+    font-size: large;
+    align-items: center;
+    flex-wrap: wrap;
+}
+#btt_gameplay {
+    width:3.5cm;
+}
+#btt_staff {
+    padding-left: 0.4cm;
+    padding-right: 0.4cm;
+}
+#btt_contact {
+    width: 3cm;
+}
+.menu-button a:hover{
+    color: aqua;
+    font-size: xx-large;
+}
+/* Main body - Title */
+.firt-title {
+    margin: auto;
+    margin-top: 2.5in;
+}
+.firt-title , .second-title {
+    color: white;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-size: xx-large;
+}
+.second-title {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+}
+#copy_button {
+    width: 2.5in;
+    height: 1cm;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    font-size: x-large;
+    font-weight: 700;
+    margin: 0 auto;
+    border-radius: 10cm;
+    background: red;
+    color: white;
+    border: none;
+    transition: all .4s;
+}
+#copy_button:focus {
+    outline: none;
+}
+#copy_button:hover {
+    background: white;
+    color: #222;
+}
+.GamePlay {
+    color: white;
+}
+.Staff {
+    margin-top: 5in;
+    width: 100%;
+    height: 6in;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: center;
+    position: absolute;
+    left: 0;
+    padding-bottom: 5cm;
+}
+.title-staff {
+    top: -2cm;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    color: white;
+    position: absolute;
+}
+.box{
+    width: 1.5in;
+    height: 1.7in;
+    background: rgba(255, 255, 255, 0.545);
+    transition: all 2s ease;
+    border-radius: 10px 10px 0cm 0cm;
+    backdrop-filter: blur(5px);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    z-index: 1;
+}
+.box#Owner {
+    margin-left: 1cm;
+}
+.box#Admins {
+    margin: 0 auto;
+}
+.box#Admin {
+    margin-right: 1cm;
+}
+.staff-pos {
+    display: flex;
+    justify-content: center;
+    color: white;
+    letter-spacing: 0.1rem;
+    font-weight: 500;
+    margin-top: -0.1rem;
+    position: absolute;
+}
+.name-staff {
+    color : white;
+    display: flex;
+    justify-content: center;
+    font-size: x-large;
+    letter-spacing: 0.5px;
+    margin-top: 25px;
+    position: absolute;
+} 
+.skin {
+    width: 3.8cm;
+    height: 2in;
+    margin: 1.6cm auto;
+    display: flex;
+    padding-bottom: 0.4cm;
+    border-top: 2px dashed white;
+    border-bottom: 2px dashed white;
+    transition: .2s;
+    opacity: 0;
+    transition-delay: .5s;
+    position: absolute;
+}
+#ad-og-skin {
+    width: 3.9cm;
+    height: 1.7in;
+    margin-top: 1.8cm;
+}
+.img-under-box {
+    width: 1.5in;
+    position: absolute;
+    bottom: -0.99cm;
+}
+.box a {
+    width: 100%;
+    height: 1cm;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+    font-size: x-large;
+}
+.box i {
+    font-size: x-large;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+.contact {
+    color: white;
+    text-decoration: none;
+    transition: all .2s 0.4s;
+    transition-delay: 0.2ms;
+    position: absolute;
+    bottom: 2cm;
+    opacity: 0;
+    visibility: hidden;
+}
+.contact#a2 {
+    bottom: 3rem;
+}
+.box:hover{
+    height: 3.98in;
+    z-index: 2;
+    transform: scale(1.1);
+}
+.box:hover .skin {
+    opacity: 1;
+}
+.box:hover .contact {
+    opacity: 1;
+    transform: translateY(10px);
+    transition-delay: 1.25s;
+    visibility: visible;
+} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Media Web Content*/
+@media screen and (max-width: 900px ) {
+    .box#Admin {
+        margin: 1.5cm auto;
+    }
+    .menu {
+        display: none;
+    }
+    .menu-down {
+        display: flex;
+    }
+} 
+/* Media Web Content*/
